@@ -76,7 +76,7 @@ class Plugin extends PluginBase
 
     public function register()
     {
-//        AliasLoader::getInstance()->alias('Model', '\RtlWeb\Persian\Database\Model');
+        AliasLoader::getInstance()->alias('Model', '\RtlWeb\Persian\Database\Model');
         AliasLoader::getInstance()->alias('October\Rain\Database\Traits\Sluggable', 'RtlWeb\Persian\Database\Traits\Sluggable');
         AliasLoader::getInstance()->alias('October\Rain\Argon\Argon', 'RtlWeb\Persian\Classes\Argon');
 
