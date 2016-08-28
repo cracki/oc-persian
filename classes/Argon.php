@@ -16,11 +16,16 @@ class Argon extends DateBase
     /**
      * Returns date formatted according to given format.
      * @param string $format
+     * @param bool $store
      * @return string
      * @link http://php.net/manual/en/datetime.format.php
      */
-    public function format($format)
+    public function format($format, $store=false)
     {
+        if($store){
+            return parent::format($format);
+        }
+        
         return parent::format(jDateTime::date($format,$this->getTimestamp()));
     }
 
